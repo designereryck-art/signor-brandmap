@@ -62,6 +62,22 @@ function makeLogoDirectionSlides(page) {
   ];
 }
 
+function makeMoodboardSplit(page) {
+  return [
+    {
+      ...page,
+      textOnly: true,
+    },
+    {
+      ...page,
+      type: "moodboardGallery",
+      page: `moodboard-gallery-${page.page}`,
+      number: `${page.number}G`,
+      blockTitle: "REFERÊNCIAS VISUAIS",
+    },
+  ];
+}
+
 function expandPage(page) {
   if (page.page === 24) {
     const personaPage = { ...page, page: "persona-detail", number: "024B", items: page.items.slice(1), paragraphs: page.items.slice(1).map((item) => item.text) };
@@ -73,6 +89,7 @@ function expandPage(page) {
   }
 
   if (page.page === 35) return [{ ...page, type: "comparison" }];
+  if ([51, 52, 53].includes(page.page)) return makeMoodboardSplit(page);
   if (page.page === 58) return makeLogoDirectionSlides(page);
 
   return [page];
@@ -324,11 +341,10 @@ function ManifestoSlide({ slide }) {
 }
 
 function MoodboardTextSlide({ slide }) {
-  const [activeImage, setActiveImage] = useState(null);
-  const visibleItems = slide.items.slice(0, 6);
+  const visibleItems = slide.textOnly ? slide.items : slide.items.slice(0, 6);
 
   return (
-    <div className="col-span-12 row-span-12 animate-enter moodboard-text-slide">
+    <div className={`col-span-12 row-span-12 animate-enter moodboard-text-slide ${slide.textOnly ? "is-text-only" : ""}`}>
       <SlideHeader slide={slide} />
       <div className="mt-11 mb-7 flex items-start justify-between gap-8">
         <h2 className="max-w-[820px] font-display text-[clamp(38px,5.2vw,78px)] font-medium uppercase leading-[0.98]">{slide.title}</h2>
@@ -343,14 +359,24 @@ function MoodboardTextSlide({ slide }) {
             </section>
           ))}
         </div>
-        <div className="mood-grid is-compact">
-          {slide.images.map((image, index) => (
-            <button className="mood-tile" key={image.src} onClick={() => setActiveImage(image)} aria-label={`Abrir ${image.label}`}>
-              <img src={image.src} alt={image.label} />
-              <span>{pad(index + 1)}</span>
-            </button>
-          ))}
-        </div>
+        {!slide.textOnly && <MoodboardGrid images={slide.images} compact />}
+      </div>
+    </div>
+  );
+}
+
+function MoodboardGrid({ images, compact = false, gallery = false, showLabels = true }) {
+  const [activeImage, setActiveImage] = useState(null);
+
+  return (
+    <>
+      <div className={`mood-grid ${compact ? "is-compact" : ""} ${gallery ? "is-gallery" : ""}`}>
+        {images.map((image, index) => (
+          <button className="mood-tile" key={image.src} onClick={() => setActiveImage(image)} aria-label={`Abrir ${image.label}`}>
+            <img src={image.src} alt={image.label} />
+            {showLabels && <span>{pad(index + 1)}</span>}
+          </button>
+        ))}
       </div>
       {activeImage && (
         <div className="image-modal" role="dialog" aria-modal="true" onClick={() => setActiveImage(null)}>
@@ -358,6 +384,14 @@ function MoodboardTextSlide({ slide }) {
           <img src={activeImage.src} alt={activeImage.label} />
         </div>
       )}
+    </>
+  );
+}
+
+function MoodboardGallerySlide({ slide }) {
+  return (
+    <div className="col-span-12 row-span-12 animate-enter moodboard-gallery-slide">
+      <MoodboardGrid images={slide.images} gallery showLabels={false} />
     </div>
   );
 }
@@ -487,6 +521,7 @@ function SlideRenderer({ slide, goToPage, pageToIndex }) {
     manifestoCover: ManifestoCoverSlide,
     manifesto: ManifestoSlide,
     moodboardText: MoodboardTextSlide,
+    moodboardGallery: MoodboardGallerySlide,
     referenceDirection: ReferenceDirectionSlide,
     palette: PaletteSlide,
     toc: TocSlide,
