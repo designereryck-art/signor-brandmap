@@ -178,11 +178,12 @@ function CoverSlide({ slide }) {
 }
 
 function TextSlide({ slide }) {
-  const isLong = slide.paragraphs.join(" ").length > 1050 || slide.paragraphs.length > 4;
+  const isEditorialWide = [10, 11, 17].includes(slide.page);
+  const isLong = !isEditorialWide && (slide.paragraphs.join(" ").length > 1050 || slide.paragraphs.length > 4);
   const isDark = slide.theme === "dark";
 
   return (
-    <div className={`col-span-12 row-span-12 grid grid-cols-12 gap-x-8 animate-enter text-slide ${isLong ? "is-long" : ""}`}>
+    <div className={`col-span-12 row-span-12 grid grid-cols-12 gap-x-8 animate-enter text-slide ${isLong ? "is-long" : ""} ${isEditorialWide ? "is-editorial-wide" : ""}`}>
       <aside className="text-aside col-span-3 flex flex-col justify-between border-r border-current/15 pr-8">
         <div>
           <span className="font-display text-5xl font-medium leading-none">{slide.number}</span>
@@ -213,6 +214,8 @@ function BlocksSlide({ slide }) {
   const blockClass = [
     "col-span-12 row-span-12 animate-enter blocks-slide",
     introAsidePages ? "has-intro-aside" : "",
+    [12, 13, 14].includes(slide.page) ? "lower-blocks" : "",
+    slide.page === 39 ? "is-vocab-avoid" : "",
     [6, 12, 13, 48, 49, 50, 57, 65, 66, 67].includes(slide.page) ? "is-compact-blocks" : "",
     [66, 67].includes(slide.page) ? "is-summary-blocks" : "",
   ].filter(Boolean).join(" ");

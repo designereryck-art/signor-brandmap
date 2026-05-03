@@ -1629,7 +1629,7 @@ window.SIGNOR_CONTENT = {
       "theme": "light",
       "page": 43,
       "number": "043",
-      "title": "Linguagem por Contexto / Linguagem Institucional",
+      "title": "Linguagem Institucional",
       "block": "Bloco 04",
       "blockTitle": "NARRATIVA E UNIVERSO VERBAL",
       "paragraphs": [
@@ -1672,7 +1672,7 @@ window.SIGNOR_CONTENT = {
       "theme": "light",
       "page": 44,
       "number": "044",
-      "title": "Linguagem por Contexto / Linguagem Comercial",
+      "title": "Linguagem Comercial",
       "block": "Bloco 04",
       "blockTitle": "NARRATIVA E UNIVERSO VERBAL",
       "paragraphs": [
@@ -1715,7 +1715,7 @@ window.SIGNOR_CONTENT = {
       "theme": "light",
       "page": 45,
       "number": "045",
-      "title": "Linguagem por Contexto Linguagem para Conteúdo e Relacionamento",
+      "title": "Linguagem para Conteúdo e Relacionamento",
       "block": "Bloco 04",
       "blockTitle": "NARRATIVA E UNIVERSO VERBAL",
       "paragraphs": [
@@ -1759,8 +1759,7 @@ window.SIGNOR_CONTENT = {
         "A direção estética da Signor nasce da estratégia. Antes de qualquer escolha visual, este bloco existe para traduzir o posicionamento da marca em códigos, sensações e referências capazes de orientar sua futura identidade com clareza e coerência.",
         "Nesta etapa, ainda não estamos apresentando uma marca visual finalizada. O objetivo é estabelecer o universo que deve guiar sua construção: quais atmosferas fazem sentido, quais códigos visuais fortalecem sua percepção, quais caminhos tipográficos e cromáticos sustentam seu posicionamento e quais estilos de logotipo podem representar melhor a força que a marca deseja transmitir.",
         "A estética da Signor precisa comunicar maturidade, presença e distinção. Ela deve se afastar do visual comum do marketing digital e se aproximar de um território mais estratégico, sofisticado e empresarial. Cada escolha visual deverá existir para reforçar o mesmo ponto: a Signor não é uma marca de execução genérica, mas uma empresa construída para transmitir direção, critério e valor.",
-        "Por isso, este bloco funciona como uma ponte entre estratégia e criação. Ele organiza o caminho antes da identidade final, garantindo que a próxima etapa não seja conduzida apenas por gosto visual, mas por uma leitura clara sobre o que a marca precisa representar, sustentar e provocar no mercado.",
-        "Essa página abre o bloco estético com a cautela correta: deixa claro que ainda não estamos apresentando identidade final, mas sim o caminho visual que vai orientar a criação. Isso protege o processo, educa a cliente e reforça que as próximas decisões visuais precisam nascer do posicionamento já construído."
+        "Por isso, este bloco funciona como uma ponte entre estratégia e criação. Ele organiza o caminho antes da identidade final, garantindo que a próxima etapa não seja conduzida apenas por gosto visual, mas por uma leitura clara sobre o que a marca precisa representar, sustentar e provocar no mercado."
       ],
       "items": [
         {
@@ -1782,20 +1781,15 @@ window.SIGNOR_CONTENT = {
           "text": "Por isso, este bloco funciona como uma ponte entre estratégia e criação. Ele organiza o caminho antes da identidade final, garantindo que a próxima etapa não seja conduzida apenas por gosto visual, mas por uma leitura clara sobre o que a marca precisa representar, sustentar e provocar no mercado.",
           "lead": "",
           "body": "Por isso, este bloco funciona como uma ponte entre estratégia e criação. Ele organiza o caminho antes da identidade final, garantindo que a próxima etapa não seja conduzida apenas por gosto visual, mas por uma leitura clara sobre o que a marca precisa representar, sustentar e provocar no mercado."
-        },
-        {
-          "text": "Essa página abre o bloco estético com a cautela correta: deixa claro que ainda não estamos apresentando identidade final, mas sim o caminho visual que vai orientar a criação. Isso protege o processo, educa a cliente e reforça que as próximas decisões visuais precisam nascer do posicionamento já construído.",
-          "lead": "",
-          "body": "Essa página abre o bloco estético com a cautela correta: deixa claro que ainda não estamos apresentando identidade final, mas sim o caminho visual que vai orientar a criação. Isso protege o processo, educa a cliente e reforça que as próximas decisões visuais precisam nascer do posicionamento já construído."
         }
       ]
     },
     {
-      "type": "blocks",
+      "type": "text",
       "theme": "light",
       "page": 47,
       "number": "047",
-      "title": "Conceito Visual da Marca / Conceito Central",
+      "title": "Conceito Central",
       "block": "Bloco 05",
       "blockTitle": "DIREÇÃO ESTÉTICA E CÓDIGOS VISUAIS",
       "paragraphs": [
@@ -1826,7 +1820,7 @@ window.SIGNOR_CONTENT = {
       "theme": "light",
       "page": 48,
       "number": "048",
-      "title": "Conceito Visual da Marca / Tradução Visual do Conceito",
+      "title": "Tradução Visual do Conceito",
       "block": "Bloco 05",
       "blockTitle": "DIREÇÃO ESTÉTICA E CÓDIGOS VISUAIS",
       "paragraphs": [
@@ -1881,7 +1875,7 @@ window.SIGNOR_CONTENT = {
       "theme": "light",
       "page": 49,
       "number": "049",
-      "title": "Sensações Visuais da Marca / Sensações que a Marca Deve Transmitir",
+      "title": "Sensações que a Marca Deve Transmitir",
       "block": "Bloco 05",
       "blockTitle": "DIREÇÃO ESTÉTICA E CÓDIGOS VISUAIS",
       "paragraphs": [
@@ -1924,7 +1918,7 @@ window.SIGNOR_CONTENT = {
       "theme": "light",
       "page": 50,
       "number": "050",
-      "title": "Sensações Visuais da Marca / Sensações que a Marca Deve Evitar",
+      "title": "Sensações que a Marca Deve Evitar",
       "block": "Bloco 05",
       "blockTitle": "DIREÇÃO ESTÉTICA E CÓDIGOS VISUAIS",
       "paragraphs": [
@@ -3392,15 +3386,15 @@ window.SIGNOR_CONTENT = {
         },
         {
           "page": 43,
-          "title": "Linguagem por Contexto / Linguagem Institucional"
+          "title": "Linguagem Institucional"
         },
         {
           "page": 44,
-          "title": "Linguagem por Contexto / Linguagem Comercial"
+          "title": "Linguagem Comercial"
         },
         {
           "page": 45,
-          "title": "Linguagem por Contexto Linguagem para Conteúdo e Relacionamento"
+          "title": "Linguagem para Conteúdo e Relacionamento"
         }
       ]
     },
@@ -3414,19 +3408,19 @@ window.SIGNOR_CONTENT = {
         },
         {
           "page": 47,
-          "title": "Conceito Visual da Marca / Conceito Central"
+          "title": "Conceito Central"
         },
         {
           "page": 48,
-          "title": "Conceito Visual da Marca / Tradução Visual do Conceito"
+          "title": "Tradução Visual do Conceito"
         },
         {
           "page": 49,
-          "title": "Sensações Visuais da Marca / Sensações que a Marca Deve Transmitir"
+          "title": "Sensações que a Marca Deve Transmitir"
         },
         {
           "page": 50,
-          "title": "Sensações Visuais da Marca / Sensações que a Marca Deve Evitar"
+          "title": "Sensações que a Marca Deve Evitar"
         },
         {
           "page": 51,
